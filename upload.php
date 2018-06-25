@@ -15,7 +15,7 @@
             ?>
 
             <form action="upload.php" method="post" enctype="multipart/form-data">
-                <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
+                <input type="hidden" name="MAX_FILE_SIZE"/>
                 <input type="file" name="myFile">
                 <input type="submit" name="btn_upload" value="Upload File">
             </form>
@@ -26,6 +26,7 @@
        // define("UPLOAD_DIR", "C:/xampp_yangu/htdocs/resystem/files/"); // avoid using the constants like this way, use as I have done in the next line
         define("UPLOAD_DIR", dirname(__FILE__) . "\\files\\");
         if (!empty($_FILES["myFile"])) {
+//            var_dump($_FILES);
             $myFile = $_FILES["myFile"];
             if ($myFile["error"] !== UPLOAD_ERR_OK) {
                 echo "<p>An error occurred.</p>";
