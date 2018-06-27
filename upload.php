@@ -53,7 +53,7 @@
             }
 
             // The permission of files here for understand letes reviews the linux chmod as taught by Kilma
-            chmod(UPLOAD_DIR . $name, 0644);
+            chmod(UPLOAD_DIR . $name,0777);
         }
         ?>
 
